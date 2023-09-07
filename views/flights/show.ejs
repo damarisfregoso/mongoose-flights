@@ -1,0 +1,46 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+  <ul>
+    <li>Airline: <%= flight.airline %></li>
+    <li>Airport: <%= flight.airport %></li>
+    <li>Flight: <%= flight.flight %></li>
+    <li>Departs: <%= flight.departs %></li>
+  </ul>
+</section>
+
+<br><br><h2>Arrival: Dates & Times</h2>
+<form 
+id="arrival"
+action="/flights/<%= flight._id %>/destinations"
+method="POST"
+>
+<label>
+  Destination: 
+  <select name="airport">
+    <option value="AUS">AUS</option>
+    <option value="DFW">DFW</option>
+    <option value="DEN">DEN</option>
+    <option value="LAX">LAX</option>
+    <option value="SAN">SAN</option>
+  </select>
+</label>
+<label>
+  Date:
+  <input type="date" name="arrival">
+</label>
+<button type="submit">Add Destination</button>
+</form>
+
+<% if (flight.destinations.length) { %>
+  <% flight.destinations.forEach(function(d) { %>
+    <ul>
+      <li>Destination: <%= d.airport %></li>
+      <li>Arrival: <%= d.arrival %></li>
+    </ul>
+  <% }); %>
+<% } else { %>
+    <h5>No Details Available</h5>
+<% } %>
+
+<%- include('../partials/footer') %>
