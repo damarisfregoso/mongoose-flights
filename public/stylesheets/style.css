@@ -9,9 +9,23 @@ body {
   color: greenyellow;
 }
 
+#head {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.image1 {
+  height: auto;
+}
+
+img {
+  height: 50px;
+}
+
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: left;
 
   font-size: 20px;
 }
@@ -25,7 +39,25 @@ a {
   justify-content: center;
 }
 
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
 h2 {
   display: flex;
   justify-content: center;
+}
+
+.new-ticket {
+  background-color: greenyellow;
+  border-radius: 50px;
+  border: 3px grey solid;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
 }

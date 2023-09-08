@@ -24,7 +24,7 @@ const flightSchema = new Schema ({
     enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
     default: 'DEN'
   },
-  flight: {
+  flightNo: {
     type: Number,
     min: 10,
     max: 9999
@@ -32,6 +32,11 @@ const flightSchema = new Schema ({
   departs: {
     type: Date,
     default: new Date(new Date().setFullYear(new Date().getFullYear() + 1))},
+  // flight: [{
+  //   //Always use ObjectIds to implement referencing 
+  //   type: Schema.Types.ObjectId,
+  //   ref: 'Ticket'
+  // }],
   destinations: [destinationSchema]
   }, {
     timestamps: true

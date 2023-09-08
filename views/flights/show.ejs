@@ -1,11 +1,25 @@
 <%- include('../partials/header') %>
-
+<h1>
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+  &nbsp; Flight Details &nbsp; 
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+</h1>
 <section id="show-page">
   <ul>
-    <li>Airline: <%= flight.airline %></li>
-    <li>Airport: <%= flight.airport %></li>
-    <li>Flight: <%= flight.flight %></li>
-    <li>Departs: <%= flight.departs %></li>
+    <li>- Airline: <%= flight.airline %></li>
+    <li>- Airport: <%= flight.airport %></li>
+    <li>- Flight: <%= flight.flightNo %></li>
+    <li>- Departs: <%= flight.departs %></li>
+  </ul>
+</section>
+
+<h1>List of Tickets</h1>
+<section id="show-page">
+  <a class="new-ticket" href="/flights/<%= flight._id %>/tickets/new">New Ticket</a> 
+  <ul>
+    <% for (let i = 0; i < tickets.length; i++) { %>
+      <li>- Seat: <%= tickets[i].seat %> &nbsp; Price: $<%= tickets[i].price %></li>
+    <% } %>
   </ul>
 </section>
 

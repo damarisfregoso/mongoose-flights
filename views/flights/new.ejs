@@ -1,5 +1,9 @@
 <%- include('../partials/header') %>
-<h2>Enter a Flight</h2>
+<h1>
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+  &nbsp; Enter a Flight &nbsp; 
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+</h1>
 <form action="/flights" method="POST">
   <label> 
     Airline: 
@@ -20,8 +24,8 @@
     </select>
   </label><br>
   <label>
-    Flight: 
-    <input type="number" name="flight">
+    Flight Number: 
+    <input type="number" name="flightNo">
   </label><br>
   <label>
     Departs:

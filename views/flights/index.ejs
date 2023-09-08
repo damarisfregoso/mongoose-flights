@@ -1,10 +1,16 @@
 <%- include('../partials/header') %>
-<h3>Flights</h3>
+
+<h1>
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+  &nbsp; Flights &nbsp; 
+  <img src="https://clipart-library.com/new_gallery/16-169059_plane-png-image-airplane-clip-art.png" alt="airplane">
+</h1>
+
 <ul>
   <% flights.forEach(function (f) { %>
     <li>Flight: <%= f.airline %></li>
     <li>Airport: <%= f.airport %></li>
-    <li>Flight: <%= f.flight %></li>
+    <li>Flight: <%= f.flightNo %></li>
     <li>Departs: <%= f.departs %></li>
     <a href="/flights/<%= f._id %>">DETAILS</a><br>
     ________________________________________________________________________________
